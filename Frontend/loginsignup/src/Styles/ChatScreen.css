@@ -1,0 +1,767 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* 
+.roboto-google-fonts {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  } */
+
+#root{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; 
+}
+hr{
+    margin: 5px;
+    border-color: rgb(180 171 171 / 28%);
+}
+#chat-screen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 95%;
+    width: 95%;
+    background-color: rgba(239, 246, 252, 1);
+    /* border: 1px solid red; */
+}
+
+.chat-sub-screen{
+    display: flex;
+    border-radius: 15px;
+    height: 95%;
+
+    /* border: 1px solid purple; */
+}
+
+.sub-contact-div{
+    border-radius: 15px;
+    flex-direction: column;
+    background-color: white;
+    padding: 1px 10px;
+    box-shadow: 2px 2px 7px 1px #5f7c94;
+    padding-top: 10px;
+    margin-top: 17px;
+}
+
+/* DASHBOARD CSS-------------------------------------------------------- */
+
+#dashboard{
+    display: flex;
+    /* width: 8%; */
+    background-color: rgba(110, 0, 255, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 7px 1px #5f7c94;
+    justify-content: space-between;
+    font-size: medium;
+    max-width: 65px;
+}
+.sub-dashboard-div{
+    /* border: 1px solid green; */
+}
+
+#show-dp-component-div{
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    backdrop-filter: blur(2px);
+    /* place-self: anchor-center; */
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    align-content: space-around;
+    flex-direction: column;
+}
+#show-dp-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid #6e00ff;
+    box-shadow: 2px 2px 15px 2px #54697b;
+    cursor: pointer;
+}
+#show-dp-img-div{
+    display: flex;
+    height: 90%;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+#show-dp-detail-bar-div{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 5%;
+    background-color: #040009c9;
+    color: white;
+}
+#show-dp-close-div{
+    cursor: pointer;
+}
+
+#user-dp-div{
+    /* height: 50px;
+    width: 50px; */
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user-dp-div img{
+    height: 50px;
+    width: 50px;
+    border-radius: 35px;
+}
+#dashboard-options-div{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.dashboard-inner-options-div{
+    height: 20%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-inner-options-div-active{
+    height: 20%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000047;
+    border-radius: 20px;
+    margin: 0px 4px;
+}
+#logout-div{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-buttons{
+    width: 45%;
+    cursor: pointer;
+}
+
+/* CONTACTS CSS------------------------------------------------------------ */
+#contacts{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    max-width: 300px;
+}
+.sub-contact-div-heading{
+    margin: 5px 0px 5px 5px;
+}
+::-webkit-scrollbar{
+    width: 1px;
+}
+#group-outer-container{
+    margin: 0px;
+    height: 77%;
+    padding: 0px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+#create-group-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns {
+    /* height: auto; */
+    margin: 0px;
+    padding: 2px 4px;
+    background-color: #6e00ff;
+    font-size: 13px;
+}
+#contact-outer-container{
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+#individual-contacts-div{
+    height: 55%;
+    /* height: -webkit-fill-available; */
+}
+#group-contacts-div{
+    height: 30%;
+}
+.group-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* margin-bottom: 10px;     */
+}
+.group-container:hover{
+    background-color: #0000000d;
+    cursor: pointer;
+}
+.group-dp-div{
+    /* width: 15%; */
+}
+.group-dp-div img{
+    height: 40px;
+    width: 40px;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+}
+.group-container-mid{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.group-container-mid p{
+    margin: 0px;
+    font-size: 12px;
+    color: rgb(48 48 48 / 68%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.group-container-mid h3{
+    font-size: 14px;
+    margin: 0px;
+    margin-bottom: 6px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.unseen-messages{
+    /* border: 1px solid red; */
+    /* border-radius: 5px; */
+    width: 25%;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.unseen-messages p{
+    margin: 0px 0px 3px 0px ;
+}
+.last-msg-time{
+    color: rgba(124, 124, 124, 1);
+}
+.total-unread-msg{
+    display: flex;
+    border-radius: 14px;
+    background-color: rgba(242, 78, 30, 1);
+    color: white;
+    width: 13px;
+    height: 13px;
+    justify-content: center;
+}
+
+#search-bar{
+    height: 6%;
+    border-radius: 15px;
+    border: 0px;
+    margin: 0px;
+    box-shadow: 2px 2px 7px 1px #5f7c94;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#search-bar-input{
+    width: calc(100% - 60px);
+    height: 100%;
+    margin: 0px;
+    outline: none;
+    border: 0px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+#search-icon-btn{
+    height: 30px;
+    width: 30px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+#search-icon-btn:active{
+    transform: scale(0.95); /* Reduce button size */
+    background-color: white;
+}
+
+/* CHATBOX CSS----------------------------------------------------------------------- */
+#chat-box{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: white;
+    box-shadow: 2px 2px 7px 1px #5f7c94;
+}
+
+#contact-detail-bar{
+    height: 10%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 9px;
+    /* border: 1px solid brown; */
+}
+#friend-profile-options{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 110px);
+}
+#contact-back-img{
+    width: 20px;
+    display: none;
+}
+#contact-detail-dp-div{
+    /* width: 10%; */
+    /* border: 1px solid orange; */
+}
+#contact-detail-dp-div img{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+#sub-contact-detail-div{
+    width: calc(100% - 70px);
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 5px;
+}
+#sub-contact-detail-div h2{
+    margin: 0px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* font-weight: 500; */
+}
+#sub-contact-detail-div p{
+    margin: 0px;
+    font-size: 13px;
+    color: rgb(48 48 48 / 68%);
+}
+#other-options{
+    width: 105px;
+    /* width: 25%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* border: 1px solid red; */
+}
+.other-options-images{
+    width: 30px;
+    margin-right: 5px;
+}
+.other-options-images:hover{
+    /* border-radius: 5px; */
+    /* border: 1px solid #6e00ff; */
+    /* box-shadow: -2px -3px 9px 0px #5f7c9491; */
+    cursor: pointer;
+    transform: scale(0.90);
+}
+#add-members-close-div{
+    display: flex;
+    justify-content: flex-end;
+    color: #6e00ff;
+    margin-right: 10px;
+}
+#add-members-close-div p{
+    cursor: pointer;
+}
+#add-members-outer-div{
+    display: flex;
+    flex-direction: column;
+}
+#add-members-div{
+    /* display: none; */
+    overflow-y: scroll;
+    height: 40vh;
+    /* position: absolute;
+    right: 0px; */
+    /* z-index: 2; */
+}
+
+#add-members-option:hover #add-members-div{
+    display: flex;
+    /* background-color: black; */
+}
+
+
+#contact-options{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    height: auto;
+    max-height: 50%;
+    width: 10%;
+    /* padding: 0px 10px; */
+    max-width: 150px;
+    overflow-y: scroll;
+    /* background-color: #e7e7e74d; */
+    background-color: white;
+    position: fixed;
+    /* top: 11%; */
+    /* left: 88%; */
+    right: 5%;
+    z-index: 1;
+    color: black;
+    /* backdrop-filter: blur(5px); */
+    border: 1px solid #6e00ff38;
+    border-radius: 15px;
+}
+#contact-options-outer-div:hover #contact-options{
+    display: flex;
+}
+
+.inner-contact-option-div{
+    padding: 0px 10px;
+    margin: 0px 1px;
+}
+.inner-contact-option-div:hover{
+    background-color: #6e00ff24;
+    cursor: pointer;
+}
+
+#chat-area{
+    height: 75%;
+    overflow-y: scroll;
+    /* border: 1px solid green; */
+}
+
+.file-preview-window{
+    width: 210px;
+}
+#file-dnld-btn{
+    /* background-color: #a366ff; */
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    padding: 2px;
+}
+#file-dnld-btn:hover{
+    /* background-color: rgb(54 24 99); */
+    /* box-shadow: 2px 2px 7px 1px #5f7c94; */
+    transform: scale(0.90);
+}
+#file-dnld-outer-div{
+    display: flex;
+    align-items: flex-end;
+}
+
+.msg-date{
+    margin: 0px;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 12px;
+    color: rgb(48 48 48 / 68%);
+}
+.msg-date-outer-div{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px;
+}
+.msg-date-hr{
+    height: 0px;
+    width: -webkit-fill-available;
+}
+
+.msg-shell{
+    border-radius: 15px;
+    max-width: 80%;
+    border-radius: 20px;
+    word-break: break-word;
+}
+.incoming-msg-outer-shell{
+    display: flex;
+    flex-direction: row;
+    margin: 3px 5px 3px 5px;
+}
+.outgoing-msg-outer-shell{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 3px 5px 3px 5px;
+}
+.incoming-msg-outer-shell div{
+    /* border: 1px solid red; */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(231, 231, 231, 1);
+    padding: 2px 5px 2px 8px;
+}
+
+.incoming-msg-outer-shell p{
+    /* border: 1px solid blue; */
+    margin: 0px;
+    font-size: 9px;
+}
+
+.outgoing-msg-outer-shell div{
+    /* border: 1px solid red; */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgba(110, 0, 255, 1);
+    color: white;
+    padding: 2px 8px 2px 5px;
+    /* background-color: rgba(110, 0, 255, 1); */
+}
+.outgoing-msg-outer-shell p{
+    /* border: 1px solid blue; */
+    margin: 0px;
+    font-size: 9px;
+}
+
+
+.message-div{
+    font-size: 20px;
+}
+
+#typing-area{
+    display: flex;
+    flex-direction: row;
+    height: 12%;
+    /* border: 1px solid blue; */
+    justify-content: space-around;
+    align-items: center;
+}
+#typing-bar-options{
+    width: 85%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(239, 246, 252, 0.87);
+    border-radius: 10px;
+    /* border: 1px solid green; */
+}
+#typing-bar-options input{
+    width: 80%;
+    margin: 0px;
+    border: 0px;
+    background-color: rgba(239, 246, 252, 0.87);
+    font-size: 18px;
+    font-weight: 100;
+    outline: none;
+}
+.type-bar-buttons{
+    width: 35px;
+    cursor: pointer;
+}
+.type-bar-buttons:active{
+    transform: scale(0.90);
+}
+#mic-image{
+    height: 30px;
+    width: 30px;
+    background-color: rgba(110, 0, 255, 1);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE DESIGN--------------------------------------------------------------------- */
+@media only screen and (max-width: 1440px){
+    #chat-box{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 1270px){
+    #chat-box{
+        width: 55%;
+    }
+}
+@media only screen and (max-width: 900px){
+    #chat-box{
+        width: 45%;
+    }
+    #sub-contact-detail-div h2 {
+        font-size: 20px;
+    }
+    #contact-detail-dp-div img {
+        height: 40px;
+        width: 40px;
+    }
+    #sub-contact-detail-div h2 {
+        font-size: 16px;
+    }
+    .other-options-images {
+        width: 25px;
+    }
+    #other-options {
+        width: 90px;
+    }
+    #friend-profile-options {
+        width: calc(100% - 85px);
+    }
+    #sub-contact-detail-div {
+        width: calc(100% - 55px);
+    }    
+}
+@media only screen and (max-width: 550px){
+    #chat-screen{
+        flex-direction: column;   
+        height: 100%;
+        width: 100%;
+    }
+    /* DASHBOARD----------------------------------------------  */
+    #dashboard{
+        flex-direction: row;
+        max-width: 100%;
+        align-items: center;
+    }
+    #dashboard-options-div{
+        height: 80%;
+        flex-direction: row;
+        align-items: center;
+    }
+    .dashboard-buttons{
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .chat-sub-screen {
+        height: auto;
+        width: 95%;
+    }
+    #user-dp-div {
+        height: 100%;
+    }
+    #user-dp-div img {
+        height: 40px;
+        width: 40px;
+        margin: 5px;
+    }
+    .dashboard-inner-options-div{
+        height: 100%;
+        margin: 0px 5px;
+        padding: 0px 5px;
+    }
+    .dashboard-inner-options-div-active{
+        height: 100%;
+        margin: 0px 5px;
+        padding: 0px 5px;
+        border-radius: 10px;
+    }
+    #logout-div{
+        height: 100%;
+        margin: 0px 5px;
+    }
+    /* CONTACTS------------------------------------------------  */
+    #contacts{
+        width: 95%;
+        max-width: 100%;
+        height: 90%;
+    }
+    /* CHATBOX------------------------------------------------------  */
+    #chat-box{
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+    #contact-back-img{
+        display: flex;
+    }
+    #contact-detail-bar{
+        padding: 0px;
+        width: 100%;
+    }
+    #contact-detail-dp-div img {
+        height: 40px;
+        width: 40px;
+    }
+    #sub-contact-detail-div h2 {
+        font-size: 16px;
+    }
+    #sub-contact-detail-div {
+        padding: 0px 5px;
+        width: calc(100% - 60px);
+    }
+    #friend-profile-options {
+        width: calc(100% - 80px);
+    }
+    #other-options{
+        width: 75px;
+    }
+    .other-options-images{
+        width: 20px;
+        height: 20px;
+    }    
+    hr{
+        margin-top: 0px;
+    }
+    .message-div {
+        font-size: 15px;
+    }
+    .msg-shell p{
+        font-size: 8px;
+    }
+    #typing-area {
+        padding: 0px 5px;
+    }
+    #typing-bar-options {
+        width: 80%;
+    }
+    #typing-bar-options input {
+        font-size: 15px;    
+    }
+    .type-bar-buttons {
+        width: 30px;
+    }
+    #mic-image {
+        height: 25px;
+        width: 25px;
+        padding: 7px;
+    }
+    #contact-options {
+        width: 35vw;
+        right: 5%;
+    }
+}
+
+/* set background color of body as red and then notice the scroll chats problem */
+
+
+/* SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT----------------
+SAVE POINT---------------- */

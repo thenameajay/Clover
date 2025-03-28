@@ -1,0 +1,190 @@
+#settings-outer-div{
+    width: 88%;
+    height: 95%;
+    overflow-y: scroll;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px 1px #5f7c94;
+}
+
+#settings-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow-y: scroll;
+    /* box-shadow: 2px 2px 7px 1px #5f7c94; */
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+}
+
+#settings-back-btn-div{
+    display: none;
+}
+
+.user-info-div{
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: flex-start;
+}
+.user-info-div input{
+    width: 60%;
+    outline: none;
+    /* border: 1px solid #6e00ff45;
+    border-radius: 10px; */
+    border: 0px;
+    font-size: larger;
+    text-overflow: ellipsis;
+}
+
+#settings-profile-pic{
+    border: 1px solid #6e00ff;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.settings-btns{
+    background-color: #6e00ff;
+}
+.settings-btns:hover{
+    background-color:  #6e00ff;
+}
+.settings-btns:active{
+    background-color: #4f08ad; /* Change background color on click */
+    transform: scale(0.95); /* Reduce button size */
+}
+
+.blocked-contact-dp{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#blocklist-div{
+    flex-direction: column;
+}
+.blocklist-inner-div{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.blocked-contact-info-outer-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+}
+.blocked-contact-info-div{
+    margin-left: 10px;
+}
+.blocked-contact-info-inner-div{
+    display: flex;
+    align-items: center;
+}
+.blocked-contact-info-inner-div h3{
+    margin: 0px;
+}
+.blocked-contact-info-inner-div p{
+    margin: 0px;
+    margin-left: 5px;
+}
+.blocked-contact-quote{
+    margin: 0px;
+    color: darkgray;
+}
+#settings-btn-div{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+/* .my-button:active {
+    background-color: #4CAF50; 
+    transform: scale(0.95); 
+  } */
+
+.settings-icons{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#login-devices-outer-div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-devices-div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+.login-devices-div h3{
+    margin: 5px 0px;
+}
+.login-device-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+.login-device-details p{
+    margin: 0px;
+}
+
+
+@media only screen and (max-width: 550px){
+    #settings-div{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    #settings-outer-div{
+        width: 95%;
+        height: 90%;
+    }
+    .login-devices-div {
+        width: 100%;
+    }
+    #settings-back-btn-div{
+        display: flex;
+        position: sticky;
+        left: 0px;
+        top: 0px;
+    }
+    .user-info-div input {
+        width: calc(100% - 30px);
+    }
+    .settings-btns {
+        background-color: #6e00ff;
+        margin: 5px;
+    }
+    .blocklist-inner-div {
+        width: 100%;
+    }
+    .blocked-contact-info-outer-div {
+        width: 70%;
+    }
+    .blocked-contact-info-div {
+        width: calc(100% - 60px);
+    }
+    .blocked-contact-quote{
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
