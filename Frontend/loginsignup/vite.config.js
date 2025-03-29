@@ -14,11 +14,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
     }),
   ],
-  "apiKey": "your_api_key_here",
 
-  // server: {
-  //   allowedHosts: ['1416-103-15-253-94.ngrok-free.app'],
-  // },
+  server: {
+     allowedHosts: ['https://allwhiteclovers.vercel.app'],
+   },
   build: {
     rollupOptions: {
       input: {
