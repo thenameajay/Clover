@@ -50,7 +50,7 @@ const getFromDB = (id) => {
 
 var firebaseApp
 var messaging
-getFromDB('easyloginnnn').then((data) => {
+getFromDB('clover-8498f').then((data) => {
     firebaseApp = firebase.initializeApp(data);
     messaging = firebase.messaging(firebaseApp);
 
