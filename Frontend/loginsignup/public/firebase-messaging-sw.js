@@ -54,18 +54,18 @@ getFromDB('clover-8498f').then((data) => {
     firebaseApp = firebase.initializeApp(data);
     messaging = firebase.messaging(firebaseApp);
 
-    messaging?.onBackgroundMessage(function (payload) {
-        // console.log('Received background message ', payload);
+    // messaging?.onBackgroundMessage(function (payload) {
+    //     // console.log('Received background message ', payload);
 
-        const notificationTitle = payload.notification.title;
-        const notificationOptions = {
-            body: payload.notification.body,
-            icon: '/firebase-logo.png',  // You can set a custom icon here
-        };
+    //     const notificationTitle = payload.notification.title;
+    //     const notificationOptions = {
+    //         body: payload.notification.body,
+    //         icon: '/firebase-logo.png',  // You can set a custom icon here
+    //     };
 
-        // Display the notification
-        self.registration.showNotification(notificationTitle, notificationOptions);
-    });
+    //     // Display the notification
+    //     self.registration.showNotification(notificationTitle, notificationOptions);
+    // });
 })
 
 
@@ -75,15 +75,15 @@ getFromDB('clover-8498f').then((data) => {
 // messages.
 // const messaging = firebase.messaging(firebaseApp);
 
-// messaging?.onBackgroundMessage(function (payload) {
-//     // console.log('Received background message ', payload);
+messaging?.onBackgroundMessage(function (payload) {
+    // console.log('Received background message ', payload);
 
-//     const notificationTitle = payload.notification.title;
-//     const notificationOptions = {
-//         body: payload.notification.body,
-//         icon: '/firebase-logo.png',  // You can set a custom icon here
-//     };
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+        body: payload.notification.body,
+        icon: '/firebase-logo.png',  // You can set a custom icon here
+    };
 
-//     // Display the notification
-//     self.registration.showNotification(notificationTitle, notificationOptions);
-// });
+    // Display the notification
+    self.registration.showNotification(notificationTitle, notificationOptions);
+});
