@@ -64,7 +64,7 @@ const saveToDB = (data) => {
     });
 };
 
-await saveToDB(firebaseConfig)
+saveToDB(firebaseConfig)
 // IndexedDB database------------------------------------------------------------------------------------------------------------------
 
 
