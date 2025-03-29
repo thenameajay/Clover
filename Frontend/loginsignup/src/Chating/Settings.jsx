@@ -1,4 +1,4 @@
-import "../Styles/settings.css"
+import "../Styles/Settings.css"
 import defaultDP from "../assets/dp.png"
 import saveIcon from "../assets/save.svg"
 import { useEffect, useState } from "react"
